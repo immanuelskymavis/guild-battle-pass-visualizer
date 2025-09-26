@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Orbitron', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-axie-primary to-axie-accent text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:transform-none disabled:hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-axie-secondary text-axie-dark font-bold py-2 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:transform-none disabled:hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-axie-navy rounded-xl border border-axie-primary/20 shadow-xl p-6;
+  }
+
+  .progress-bar {
+    @apply bg-axie-dark rounded-full h-4 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-axie-primary to-axie-accent transition-all duration-500 ease-out;
+  }
+
+  .character-card {
+    @apply card hover:border-axie-secondary/50 cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+  }
+
+  .track-card {
+    @apply card border-2 transition-all duration-300;
+  }
+
+  .track-card.available {
+    @apply border-axie-secondary hover:border-axie-accent hover:shadow-axie-accent/20;
+  }
+
+  .track-card.occupied {
+    @apply border-gray-500 opacity-60 cursor-not-allowed;
+  }
+
+  .track-card.active {
+    @apply border-axie-accent shadow-axie-accent/20;
+  }
+}
